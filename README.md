@@ -5,19 +5,19 @@ An easy way to add mixin methods and functions to your es6 classes and react com
 #### Installation and Usage:
 
 ```bash
-npm install es6-mixins
+npm install es6Mixins
 ```
 
-Import es6-mixins into your project:
+Import es6Mixins into your project:
 
 ```javascript
-import es6-mixins from 'es6-mixins';
+import es6Mixins from 'es6-mixins';
 ```
 
-es6-mixins has 3 arguments
+es6Mixins has 3 arguments
 
 ```javascript
-es6-mixins([a function, an array, or a class], context, options);
+es6Mixins([a function, an array, or a class], context, options);
 ```
 
 Only the first 2 arguments are required. 
@@ -30,7 +30,7 @@ The simplest example just adds someFunction to yourClass below.
 ```javascript
 class YourClass {
 	constructor(){
-		es6-mixins(somefunction, this);
+		es6Mixins(somefunction, this);
 	}
 }
 ```
@@ -55,7 +55,7 @@ The third argument is an options object that can look like this:
 **Mixing in multiple classes:**
 
 ```javascript
-import es6-mixins from 'es6-mixins';
+import es6Mixins from 'es6-mixins';
 
 // The first class to be used as a mixin
 class TestMixin1 {
@@ -77,7 +77,7 @@ class TestMixin2 {
 
 class MainClass {
 	constructor(){
-    	es6-mixins([TestMixin1, TestMixin2], this);
+    	es6Mixins([TestMixin1, TestMixin2], this);
         testMethod1() // outputs 'test Method 1 from TestMixin2' and then 'test Method 1 from TestMixin1' will warn in console about duplicate methods.
     }
 }
@@ -87,7 +87,7 @@ class MainClass {
 **Mixing in a function**:
 
 ```javascript
-import es6-mixins from 'es6-mixins';
+import es6Mixins from 'es6-mixins';
 
 // A function to add as a mixin
 function testFunction(){
@@ -96,7 +96,7 @@ function testFunction(){
 
 class MainClass {
 	constructor(){
-    	es6-mixins(testFunction, this);
+    	es6Mixins(testFunction, this);
         testFunction() // outputs 'test function'
     }
 }

@@ -1,8 +1,8 @@
 {
   "name": "es6-mixins",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An easy way to add mixin methods and functions to your es6 classes and react components.",
-  "main": "mixins.js",
+  "main": "index.js",
   "scripts": {
   },
   "repository": {
